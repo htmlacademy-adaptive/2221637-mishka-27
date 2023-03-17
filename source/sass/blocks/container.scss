@@ -1,0 +1,24 @@
+.container {
+  width: 100%;
+  min-width: $vp-320;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 $distance-30;
+
+  @media (min-width: $vp-768) {
+    padding: 0 $distance-50;
+  }
+
+  @media (min-width: $vp-1024) {
+    padding: 0 $distance-50;
+
+    &--about {
+      padding: 0 ($distance-50 + 175px);
+    }
+
+    &--review,
+    &--contact {
+      padding: 0 $distance-50 0 ($distance-50 + 175px);
+    }
+  }
+}

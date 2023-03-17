@@ -1,0 +1,80 @@
+.about {
+  margin-bottom: 50px;
+}
+
+.about__list {
+  list-style-type: none;
+  display: grid;
+
+  @media (min-width: $vp-768) {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+  }
+}
+
+.about__item {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  color: #000000;
+  position: relative;
+  padding-top: 54px;
+  margin-bottom: 20px;
+
+  @media (min-width: $vp-768) {
+    margin-right: 70px;
+    max-width: (325px + 70px);
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  @media (min-width: $vp-1024) {
+    margin-right: 115px;
+    max-width: (325px + 115px);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    background-color: #63d1bb;
+  }
+
+  &--flower::before {
+    mask: url("../img/sprite.svg#flower");
+    width: 36px;
+    height: 38px;
+  }
+
+  &--money::before {
+    mask: url("../img/sprite.svg#money");
+    width: 47px;
+    height: 27px;
+  }
+
+  &--heart::before {
+    mask: url("../img/sprite.svg#heart");
+    width: 34px;
+    height: 27px;
+  }
+
+  &--clew::before {
+    mask: url("../img/sprite.svg#clew");
+    width: 35px;
+    height: 34px;
+  }
+
+  &--rocket::before {
+    mask: url("../img/sprite.svg#rocket");
+    width: 55px;
+    height: 23px;
+  }
+
+  &--gift::before {
+    mask: url("../img/sprite.svg#gift");
+    width: 33px;
+    height: 32px;
+  }
+}

@@ -1,0 +1,58 @@
+/* РАЗНЕСИ ПО ВСЕМ БЛОКАМ!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!! */
+.form ul {
+  list-style: none;
+}
+
+/* !!!!!!!!!!!!!!!!! */
+
+.form {
+  margin-bottom: 80px;
+}
+
+.form__block {
+  margin: 20px 0;
+  border: 0;
+
+  @media (min-width: $vp-768) {
+    display: grid;
+    grid-template-columns: 167px 1fr;
+    position: relative;
+  }
+
+  @media (min-width: $vp-1024) {
+    grid-template-columns: 175px 1fr;
+  }
+}
+
+.form__submit {
+  display: flex;
+  flex-direction: column-reverse;
+
+  @media (min-width: $vp-768) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $vp-1024) {
+    margin-left: 175px;
+  }
+}
+
+.form__title {
+  @media (min-width: $vp-768) {
+    float: left;
+  }
+}
+
+.form__chekbox-list {
+  @media (min-width: $vp-768) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $vp-1024) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

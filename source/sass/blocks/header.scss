@@ -1,0 +1,7 @@
+.header {
+  @media (min-width: $vp-1024) {
+    background-color: #f9f9f9;
+    z-index: 2;
+    overflow: hidden;
+  }
+}

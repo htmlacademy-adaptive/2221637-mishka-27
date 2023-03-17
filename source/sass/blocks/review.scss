@@ -1,0 +1,59 @@
+.review {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  position: relative;
+
+  @media (min-width: $vp-768) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url("../img/content/review.jpg");
+      height: 100%;
+      width: calc(50% - 68px);
+      background-size: cover;
+      z-index: -1;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/content/review@2x.jpg");
+      }
+    }
+  }
+}
+
+.review__wrapper {
+  @media (min-width: $vp-768) {
+    display: grid;
+    grid-template-areas:
+      "title button"
+      "text text"
+      "author slider";
+  }
+}
+
+.review__title {
+  grid-area: title;
+}
+
+.review__text {
+  grid-area: text;
+}
+
+.review__author {
+  grid-area: author;
+  display: flex;
+  flex-direction: column;
+}
+
+.review__name {
+  font-weight: 700;
+}
+
+.review__slider {
+  grid-area: slider;
+}
+
+.review__button {
+  grid-area: button;
+}

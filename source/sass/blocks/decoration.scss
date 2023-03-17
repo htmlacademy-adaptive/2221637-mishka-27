@@ -1,0 +1,15 @@
+.decoration {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: $distance-30;
+    right: $distance-30;
+    height: 6px;
+    background-repeat: repeat-x;
+    mask: url("../img/sprite.svg#waves");
+    background-color: #f1f1f1;
+  }
+}

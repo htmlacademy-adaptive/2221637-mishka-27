@@ -1,0 +1,111 @@
+.week-product {
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+
+  @media (min-width: $vp-768) {
+    display: grid;
+    grid-template-areas:
+      "heading heading"
+      "description image"
+      "specs image"
+      "price image"
+      "button image";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto 1fr auto;
+    align-items: start;
+  }
+
+  @media (min-width: $vp-1024) {
+    grid-template-areas:
+      "heading heading image"
+      "none description image"
+      "none specs image"
+      "none price image"
+      "none button image";
+    grid-template-columns: 175px 1fr 50%;
+  }
+}
+
+.week-product__heading {
+  grid-area: heading;
+  display: flex;
+  flex-direction: column-reverse;
+
+  @media (min-width: $vp-768) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $vp-1024) {
+    grid-area: 1 / 1 / 2 / -1;
+    position: relative;
+    z-index: 2;
+    flex-direction: row;
+    justify-content: start;
+  }
+}
+
+.week-product__sub-title {
+  @media (min-width: $vp-1024) {
+    width: 89px;
+    margin: 0 43px;
+  }
+}
+
+.week-product__description {
+  grid-area: description;
+
+  @media (min-width: $vp-768) {
+    margin-right: 42px;
+  }
+}
+
+.week-product__specs {
+  grid-area: specs;
+  display: grid;
+  grid-template-columns: 40% 60%;
+
+  @media (min-width: $vp-768) {
+    margin-right: 42px;
+  }
+}
+
+.week-product__specs-point {
+  border-bottom: 1px solid #ececec;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+
+  &:nth-child(odd) {
+    padding-right: 10px;
+  }
+}
+
+.week-product__image-wrapper {
+  grid-area: image;
+
+  @media (min-width: $vp-1024) {
+    grid-area: image;
+  }
+}
+
+.week-product__image {
+  width: 100%;
+}
+
+.week-product__price {
+  grid-area: price;
+
+  @media (min-width: $vp-768) {
+    margin-right: 42px;
+    align-self: end;
+  }
+}
+
+.week-product__button {
+  grid-area: button;
+
+  @media (min-width: $vp-768) {
+    margin-right: 42px;
+  }
+}
