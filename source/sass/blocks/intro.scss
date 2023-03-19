@@ -10,7 +10,7 @@
   &--image {
     background-image: url("../img/content/intro-mobile.jpg");
     background-size: contain;
-    background-position: 50% 0;
+    background-position: 50% -18px;
     background-repeat: no-repeat;
 
     @media (min-resolution: 2dppx) {
@@ -19,11 +19,22 @@
 
     @media (min-width: $vp-768) {
       background-image: url("../img/content/intro-tablet.jpg");
+      min-height: 746px;
+      margin-top: -47px;
+      background-position: 50% 0;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/content/intro-tablet@2x.jpg");
       }
     }
+  }
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 53px;
+  }
+
+  @media (min-width: $vp-1024) {
+    margin-bottom: 59px;
   }
 }
 
@@ -33,6 +44,22 @@
   line-height: 30px;
   margin-bottom: 120px;
   max-width: 260px;
+
+  @media (min-width: $vp-768) {
+    font-size: 43px;
+    line-height: 50px;
+    max-width: unset;
+    margin-top: 83px;
+    margin-bottom: 36px;
+    max-width: 500px;
+  }
+
+  @media (min-width: $vp-1024) {
+    margin-top: 87px;
+    font-size: 53px;
+    line-height: 57px;
+    max-width: 890px;
+  }
 }
 
 .intro__navigation {
@@ -57,7 +84,16 @@
 .intro__navigation-item {
   width: 100%;
   display: flex;
+  position: relative;
 
+  &::after {
+    content: "";
+    position: absolute;
+    cursor: pointer;
+    background-color: #149080;
+    top: 21px;
+    right: 27px;
+  }
 
   &:hover,
   &:active {
@@ -65,8 +101,27 @@
     padding-bottom: 5px;
   }
 
+  &:hover::after {
+    opacity: 0.6;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+
   &--lamp {
     background-color: #63d1bb;
+
+    &::after {
+      mask: url("../img/sprite.svg#lamp");
+      height: 62px;
+      width: 40px;
+      right: 36px;
+
+      @media (min-width: $vp-768) {
+        top: 30px;
+      }
+    }
 
     &:hover,
     &:active {
@@ -76,6 +131,17 @@
 
   &--brick {
     background-color: #56c3b2;
+
+    &::after {
+      mask: url("../img/sprite.svg#brick");
+      height: 60px;
+      width: 60px;
+
+      @media (min-width: $vp-768) {
+        top: 32px;
+        right: 34px;
+      }
+    }
 
     &:hover,
     &:active {
@@ -89,6 +155,10 @@
   text-align: start;
   text-decoration: none;
   padding: 24px 160px 31px 30px;
+
+  @media (min-width: $vp-768) {
+    padding: 25px 160px 34px 36px;
+  }
 }
 
 .intro__navigation-text {
@@ -97,4 +167,9 @@
   font-size: 19px;
   line-height: 24px;
   max-width: 130px;
+
+  @media (min-width: $vp-768) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

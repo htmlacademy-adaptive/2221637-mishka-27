@@ -5,11 +5,47 @@
     content: "";
     position: absolute;
     bottom: 0;
-    left: $distance-30;
-    right: $distance-30;
+    left: 0;
+    right: 0;
     height: 6px;
     background-repeat: repeat-x;
-    mask: url("../img/sprite.svg#waves");
-    background-color: #f1f1f1;
+    background-image: url("../img/svg/waves-mobile.svg");
+
+
+    @media (min-width: $vp-768) {
+      background-image: url("../img/svg/waves-tablet.svg");
+      height: 17px;
+    }
+
+    @media (min-width: $vp-1024) {
+      background-image: url("../img/svg/waves-desktop.svg");
+      height: 24px;
+      left: $distance-50;
+      right: $distance-50;
+    }
+  }
+
+  &--fill::after {
+    display: none;
+
+    @media (min-width: $vp-768) {
+      display: block;
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 23px;
+      bottom: -10px;
+      background-repeat: repeat-x;
+      background-image: url("../img/svg/waves-fill.svg");
+    }
+
+    @media (min-width: $vp-1024) {
+      height: 34px;
+      bottom: -18px;
+      left: 12px;
+      background-image: url("../img/svg/waves-fill-desktop.svg");
+    }
   }
 }

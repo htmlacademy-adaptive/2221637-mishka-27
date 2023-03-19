@@ -10,7 +10,7 @@
 
   @media (min-width: $vp-768) {
     flex-direction: row;
-    gap: 123px;
+    gap: 30px;
     padding-top: 51px;
     padding-bottom: 58px;
     justify-content: space-between;
@@ -47,8 +47,8 @@
   width: 100%;
   justify-content: center;
   gap: 5px 29px;
-  padding-bottom: 30px;
-  margin: 28px auto 30px auto;
+  padding-bottom: 24px;
+  margin: 28px auto 22px auto;
   border-bottom: 1px solid #e5e5e5;
   flex-wrap: wrap;
 
@@ -85,6 +85,7 @@
   color: #000000;
   font-weight: 700;
   font-size: 19px;
+  align-items: center;
 
   & > .footer__copyright-logo {
     color: #63d1bb;
@@ -100,9 +101,5 @@
     & > .footer__copyright-logo {
       opacity: 0.3;
     }
-  }
-
-  @media (min-width: $vp-768) {
-    margin-top: 8px;
   }
 }
