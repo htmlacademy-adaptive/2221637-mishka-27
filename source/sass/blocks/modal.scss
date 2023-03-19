@@ -88,10 +88,6 @@
 
 .modal__form-value:checked + .modal__form-text {
   border-color: #63D1BB;
-
-  &:hover {
-    border-color: transparentize(#444444, 0.7);
-  }
 }
 
 .modal__form {

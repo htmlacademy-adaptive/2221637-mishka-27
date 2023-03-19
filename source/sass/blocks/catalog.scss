@@ -1,7 +1,18 @@
+.catalog {
+  margin-bottom: 30px;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 53px;
+  }
+
+  @media (min-width: $vp-1024) {
+    margin-bottom: 58px;
+  }
+}
+
 .catalog__list {
   display: grid;
   gap: 30px;
-  margin-bottom: 50px;
 
   @media (min-width: $vp-768) {
     gap: 54px;

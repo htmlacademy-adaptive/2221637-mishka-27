@@ -44,8 +44,14 @@
     @media (min-width: $vp-1024) {
       height: 34px;
       bottom: -18px;
-      left: 12px;
       background-image: url("../img/svg/waves-fill-desktop.svg");
+    }
+  }
+
+  &--image::after {
+    @media (min-width: $vp-1024) {
+      background-image: url("../img/svg/waves-fill--image-desktop.svg");
+      left: 12px;
     }
   }
 }

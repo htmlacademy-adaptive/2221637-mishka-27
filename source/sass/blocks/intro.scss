@@ -1,17 +1,27 @@
 .intro {
   background-color: #f9f9f9;
   width: 100%;
-  padding-top: 73px;
   text-align: center;
   display: flex;
   flex-direction: column;
   margin-bottom: 31px;
+  padding-top: 72px;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 78px;
+    padding-top: 0;
+  }
+
+  @media (min-width: $vp-1024) {
+    margin-bottom: 132px;
+  }
 
   &--image {
     background-image: url("../img/content/intro-mobile.jpg");
     background-size: contain;
     background-position: 50% -18px;
     background-repeat: no-repeat;
+    padding-top: 73px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/content/intro-mobile@2x.jpg");
@@ -22,19 +32,16 @@
       min-height: 746px;
       margin-top: -47px;
       background-position: 50% 0;
+      margin-bottom: 53px;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/content/intro-tablet@2x.jpg");
       }
     }
-  }
 
-  @media (min-width: $vp-768) {
-    margin-bottom: 53px;
-  }
-
-  @media (min-width: $vp-1024) {
-    margin-bottom: 59px;
+    @media (min-width: $vp-1024) {
+      margin-bottom: 59px;
+    }
   }
 }
 
@@ -42,23 +49,38 @@
   font-weight: 700;
   font-size: 27px;
   line-height: 30px;
-  margin-bottom: 120px;
+  margin-bottom: 72px;
   max-width: 260px;
 
   @media (min-width: $vp-768) {
     font-size: 43px;
     line-height: 50px;
+    margin-top: 55px;
     max-width: unset;
+    margin-bottom: 76px;
+    max-width: 500px;
+    padding: 0;
+  }
+
+  @media (min-width: $vp-1024) {
+    margin-top: 57px;
+    font-size: 53px;
+    line-height: 57px;
+    max-width: 890px;
+    margin-bottom: 93px;
+  }
+}
+
+.intro--image .intro__title {
+  margin-bottom: 120px;
+
+  @media (min-width: $vp-768) {
     margin-top: 83px;
     margin-bottom: 36px;
-    max-width: 500px;
   }
 
   @media (min-width: $vp-1024) {
     margin-top: 87px;
-    font-size: 53px;
-    line-height: 57px;
-    max-width: 890px;
   }
 }
 
