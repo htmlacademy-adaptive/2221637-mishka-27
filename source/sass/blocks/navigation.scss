@@ -5,7 +5,7 @@
     "logo"
     "catalog"
     "additional";
-  background-color: #ffffff;
+  background-color: $color-white;
   z-index: 10;
 
   @media (min-width: $vp-768) {
@@ -27,7 +27,7 @@
 }
 
 .navigation__logo-wrapper {
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid $color-whisper--light;
   width: 100%;
   padding: 22px 0 22px 0;
   display: flex;
@@ -36,20 +36,20 @@
   @media (min-width: $vp-768) {
     padding: 0;
     display: block;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid $color-gainsboro;
   }
 
   @media (min-width: $vp-1024) {
     position: relative;
     &::after {
       content: "";
-      background-color: #ffffff;
+      background-color: $color-white;
       height: calc(100% + 1px);
       width: 200vw;
       position: absolute;
       left: -50vw;
       z-index: -1;
-      border-bottom: 1px solid #e5e5e5;
+      border-bottom: 1px solid $color-whisper;
     }
   }
 }
@@ -94,7 +94,7 @@
 .navigation__catalog {
   grid-area: catalog;
   list-style-type: none;
-  background-color: #ffffff;
+  background-color: $color-white;
 
   display: none;
   &--visible {
@@ -105,24 +105,24 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: #f9f9f9;
+    background-color: $color-snow;
     padding-left: $distance-50;
     padding-top: 22px;
     gap: 10px 37px;
   }
 
   @media (min-width: $vp-1024) {
-    background-color: #ffffff;
+    background-color: $color-white;
     padding: 0;
     padding-left: $distance-50;
     gap: 0;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid $color-whisper;
   }
 }
 
 .navigation__catalog-item {
   @media (min-width: $vp-1024) {
-    border-right: 1px solid #e5e5e5;
+    border-right: 1px solid $color-whisper;
     padding: 34px 35px 30px 34px;
 
     &:first-child {
@@ -138,13 +138,13 @@
 .navigation__catalog-link {
   width: 100%;
   padding: 28px $distance-30 26px ($distance-30 + 46px);
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid $color-whisper--light;
   display: inline-flex;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
   text-decoration: none;
-  color: #000000;
+  color: $color-black;
 
   &:hover {
     opacity: 0.6;
@@ -170,7 +170,7 @@
 .navigation__additional {
   grid-area: additional;
   list-style-type: none;
-  background-color: #ffffff;
+  background-color: $color-white;
   height: 100%;
 
   display: none;
@@ -186,13 +186,13 @@
     padding-right: $distance-50;
     padding-left: 20px;
     height: auto;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid $color-gainsboro;
   }
 }
 
 .navigation__additional-item {
   @media (min-width: $vp-768) {
-    border-left: 1px solid #e5e5e5;
+    border-left: 1px solid $color-whisper;
 
     &--hidden-text {
       margin-right: 32px;
@@ -220,13 +220,13 @@
 .navigation__additional-link {
   width: 100%;
   padding: 28px $distance-30 26px ($distance-30 + 46px);
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid $color-whisper--light;
   display: inline-flex;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
   text-decoration: none;
-  color: #000000;
+  color: $color-black;
   position: relative;
 
   @media (min-width: $vp-768) {
@@ -240,11 +240,25 @@
   }
 
   &:hover {
-    opacity: 0.6;
+    & .navigation__additional-text {
+      opacity: 0.6;
+    }
+
+    & .navigation__additional-img {
+      color: $color-downy;
+      opacity: 1;
+    }
   }
 
   &:active {
-    opacity: 0.3;
+    & .navigation__additional-text {
+      opacity: 0.3;
+    }
+
+    & .navigation__additional-img {
+      color: $color-downy;
+      opacity: 0.3;
+    }
   }
 }
 
@@ -255,6 +269,7 @@
 .navigation__additional-img {
   position: absolute;
   left: $distance-30;
+  opacity: 0.2;
 
   @media (min-width: $vp-768) {
     position: relative;
@@ -271,7 +286,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: #f9f9f9;
+    background-color: $color-snow;
     gap: 10px 63px;
     padding-left: $distance-50;
     font-weight: 700;
@@ -283,7 +298,7 @@
 
 .navigation__actions-link {
   text-decoration: none;
-  color:#000000
+  color:$color-black
 }
 
 .navigation__information {
@@ -292,7 +307,7 @@
 
   @media (min-width: $vp-768) {
     display: block;
-    background-color: #f9f9f9;
+    background-color: $color-snow;
     padding-top: 21px;
     padding-left: 20px;
     padding-right: $distance-50;

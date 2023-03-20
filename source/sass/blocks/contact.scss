@@ -29,7 +29,7 @@
   font-style: normal;
   font-size: 14px;
   line-height: 30px;
-  color: #444444;
+  color: $color-charcoal;
 
   @media (min-width: $vp-768) {
     gap: 0;
@@ -60,18 +60,18 @@
 }
 
 .contact__link {
-  border-bottom: 1px solid #62d1ba;
+  border-bottom: 1px solid $color-downy--light;
   padding-bottom: 2px;
   text-decoration: none;
-  color: #444444;
+  color: $color-charcoal;
 
   &:hover {
-    color: #46c1ae;
-    border-bottom: 1px solid #46c1ae;
+    color: $color-puerto-rico;
+    border-bottom: 1px solid $color-puerto-rico;
   }
 
   &:active {
-    border-bottom: 1px solid arentize(#46c1ae, 0.9);
+    border-bottom: 1px solid arentize($color-puerto-rico, 0.9);
   }
 
   @media (min-width: $vp-1024) {
@@ -84,7 +84,7 @@
   width: 100vw;
   height: 454px;
   left: -$distance-30;
-  background-color: #f1f1f1;
+  background-color: $color-white-smoke;
   margin-bottom: 43px;
 
   @media (min-width: $vp-768) {

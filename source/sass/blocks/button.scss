@@ -4,41 +4,41 @@
   font-size: 18px;
   line-height: 20px;
   text-transform: uppercase;
-  color: #444444;
-  border: 2px solid #444444;
-  background-color: #ffffff;
+  color: $color-charcoal;
+  border: 2px solid $color-charcoal;
+  background-color: $color-white;
   text-decoration: none;
   display: inline-block;
   text-align: center;
   cursor: pointer;
 
   &:hover {
-    background-color: #444444;
-    color: #ffffff;
+    background-color: $color-charcoal;
+    color: $color-white;
   }
 
   &:active {
-    background-color: #444444;
-    color: fade(#ffffff, 30);
+    background-color: $color-charcoal;
+    color: transparentize($color-white, 0.7);
   }
 
   &--colored {
     border: 0;
-    background-color: #63D1BB;
-    color: #ffffff;
+    background-color: $color-downy;
+    color: $color-white;
     padding: 19px;
     font-size: 17px;
     line-height: 16px;
 
     &:hover {
-      background-color: #63D1BB;
-      color: #ffffff;
+      background-color: $color-downy;
+      color: $color-white;
       opacity: 0.6;
     }
 
     &:active {
-      background-color: #63D1BB;
-      color: #ffffff;
+      background-color: $color-downy;
+      color: $color-white;
       opacity: 0.3;
     }
   }

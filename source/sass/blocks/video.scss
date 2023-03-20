@@ -11,7 +11,7 @@
 }
 
 .video__wrapper {
-  border: 1px solid #ececec;
+  border: 1px solid $color-whisper--light;
   padding: 22px 34px 33px 34px;
 
   @media (min-width: $vp-768) {
@@ -42,7 +42,7 @@
   &::before {
     position: absolute;
     content: "";
-    background-color: #63D1BB;
+    background-color: $color-downy;
     mask: url("../img/sprite.svg#camera");
     width: 32px;
     height: 22px;
@@ -111,7 +111,7 @@
   border: 0;
   cursor: pointer;
   transform: translateX(-50%) translateY(-50%);
-  color: #63d1bb;
+  color: $color-downy;
   width: 100px;
   height: 77px;
   transition: all 0.1s;

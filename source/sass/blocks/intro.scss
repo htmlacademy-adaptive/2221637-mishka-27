@@ -1,5 +1,5 @@
 .intro {
-  background-color: #f9f9f9;
+  background-color: $color-snow;
   width: 100%;
   text-align: center;
   display: flex;
@@ -124,7 +124,7 @@
     content: "";
     position: absolute;
     cursor: pointer;
-    background-color: #149080;
+    background-color: $color-dark-cyan;
     top: 21px;
     right: 27px;
   }
@@ -144,7 +144,7 @@
   }
 
   &--lamp {
-    background-color: #63d1bb;
+    background-color: $color-downy;
 
     &::after {
       mask: url("../img/sprite.svg#lamp");
@@ -159,12 +159,12 @@
 
     &:hover,
     &:active {
-      background-color: #59d5bc;
+      background-color: $color-downy--dark;
     }
   }
 
   &--brick {
-    background-color: #56c3b2;
+    background-color: $color-puerto-rico--dark;
 
     &::after {
       mask: url("../img/sprite.svg#brick");
@@ -179,7 +179,7 @@
 
     &:hover,
     &:active {
-      background-color: #46c1ae;
+      background-color: $color-puerto-rico;
     }
   }
 }
@@ -196,7 +196,7 @@
 }
 
 .intro__navigation-text {
-  color: #ffffff;
+  color: $color-white;
   font-weight: 700;
   font-size: 19px;
   line-height: 24px;
