@@ -16,6 +16,10 @@
     line-height: 30px;
     margin-bottom: 80px;
   }
+
+  @media (min-width: $vp-1024) {
+    margin-left: 114px;
+  }
 }
 
 .form__title {
@@ -81,7 +85,8 @@
   }
 
   @media (min-width: $vp-1024) {
-    grid-template-columns: 175px 1fr;
+    grid-template-columns: 115px 1fr;
+    margin-bottom: 65px;
   }
 
   &--name {
@@ -107,6 +112,16 @@
       padding-top: 20px;
       margin-bottom: 47px;
     }
+
+    @media (min-width: $vp-1024) {
+      margin-bottom: 44px;
+    }
+  }
+
+  &--checkbox {
+    @media (min-width: $vp-1024) {
+      width: calc(100% + 68px);
+    }
   }
 
   &--colored {
@@ -125,11 +140,27 @@
         z-index: -1;
       }
     }
+
+    @media (min-width: $vp-1024) {
+      padding-top: 68px;
+      padding-bottom: 67px;
+      margin-bottom: 68px;
+
+      &::before {
+        width: 200vw;
+        left: -100vw;
+      }
+    }
   }
 
   &--colored-tel {
     @media (min-width: $vp-768) {
       padding-bottom: 44px;
+    }
+
+    @media (min-width: $vp-1024) {
+      margin-bottom: 0;
+      padding-bottom: 41px;
     }
   }
 
@@ -139,6 +170,12 @@
       padding-bottom: 50px;
       margin-bottom: 50px;
     }
+  }
+}
+
+.form__block--colored .form__placeholder-value {
+  @media (min-width: $vp-768) {
+    background-color: #F1F1F1;
   }
 }
 
@@ -153,7 +190,7 @@
   }
 
   @media (min-width: $vp-1024) {
-    margin-left: 175px;
+    margin-left: 114px;
   }
 }
 
@@ -178,6 +215,14 @@
   @media (min-width: $vp-768) {
     font-size: 19px;
     padding-left: 78px;
+  }
+
+  &--upper {
+    min-height: 36px;
+
+    @media (min-width: $vp-768) {
+      min-height: auto;
+    }
   }
 }
 
@@ -256,11 +301,12 @@
   @media (min-width: $vp-768) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 57px 25px;
+    gap: 57px 23px;
   }
 
   @media (min-width: $vp-1024) {
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 57px 25px;
   }
 }
 
@@ -282,6 +328,10 @@
     height: 52px;
     top: -16px;
     left: -3px;
+  }
+
+  @media (min-width: $vp-1024) {
+    top: -20px;
   }
 
   &::before {
@@ -402,6 +452,11 @@
   @media (min-width: $vp-768) {
     right: 22px;
     bottom: 15px
+  }
+
+  @media (min-width: $vp-1024) {
+    right: 4px;
+    bottom: 17px
   }
 
   &--mail {

@@ -72,12 +72,12 @@
     </nav>
   </header>
 
-  <main>
+  <main class="main">
     <section class="intro intro--form decoration decoration--fill">
       <h1 class="intro__title container">Вязание на заказ</h1>
     </section>
 
-    <section class="form container">
+    <section class="form container container--form">
       <h2 class="visually-hidden">Форма заказа</h2>
       <p class="form__intro-text text">Мы&nbsp;будем рады воплотить в&nbsp;жизнь ваши пожелания! Заполните простую форму заказа и&nbsp;мы&nbsp;свяжемся с&nbsp;вами, чтобы уточнить детали.</p>
       <form method="POST" action="https://echo.htmlacademy.ru">
@@ -90,7 +90,7 @@
               <label class="form__radio">
                 <input class="form__radio-value visually-hidden" type="radio" name="type" value="accessory" checked>
                 <span class="form__radio-element form__radio-element--upper"></span>
-                <span class="form__text">Аксессуар для интерьера</span>
+                <span class="form__text form__text--upper">Аксессуар для интерьера</span>
               </label>
             </li>
             <li>
@@ -102,7 +102,7 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="form__block form__block--colored">
+        <fieldset class="form__block form__block--checkbox  form__block--colored">
           <legend class="form__title">
             <h3 class="form__sub-title sub-title">Цвет</h3>
           </legend>

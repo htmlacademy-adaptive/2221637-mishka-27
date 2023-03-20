@@ -12,6 +12,10 @@
   @media (min-width: $vp-1024) {
     padding: 0 $distance-50;
 
+    &--form {
+      padding: 0 ($distance-50 + 175px) 0 ($distance-50 + 61px);
+    }
+
     &--about {
       padding: 0 ($distance-50 + 175px);
     }
