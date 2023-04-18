@@ -78,7 +78,7 @@
     </section>
 
     <section class="form container container--form">
-      <h2 class="visually-hidden">Форма заказа</h2>
+      <h2 class="visually-hidden">Форма заказа.</h2>
       <p class="form__intro-text text">Мы&nbsp;будем рады воплотить в&nbsp;жизнь ваши пожелания! Заполните простую форму заказа и&nbsp;мы&nbsp;свяжемся с&nbsp;вами, чтобы уточнить детали.</p>
       <form method="POST" action="https://echo.htmlacademy.ru">
         <fieldset class="form__block">
@@ -183,6 +183,7 @@
           <ul class="form__placeholder-list">
             <li>
               <label class="form__placeholder">
+                <span class="visually-hidden">Телефон</span>
                 <input class="form__placeholder-value form__placeholder-value--contact" type="tel" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
                 <span class="form__placeholder-icon form__placeholder-icon--phone"></span>
               </label>
@@ -191,6 +192,7 @@
         </fieldset>
         <fieldset class="form__block form__block--contact form__block--colored form__block--colored-mail">
           <legend class="form__title form__title--contact">
+            <span class="visually-hidden">e-mail</span>
             <h3 class="form__sub-title form__sub-title--mail sub-title">e-mail</h3>
           </legend>
           <ul class="form__placeholder-list">
@@ -207,6 +209,7 @@
             <h3 class="form__sub-title sub-title">Доп</h3>
           </legend>
           <label>
+            <span class="visually-hidden">Дополнительно</span>
             <textarea class="form__textarea-value" name="message" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </label>
         </fieldset>

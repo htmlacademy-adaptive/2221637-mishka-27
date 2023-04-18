@@ -1,27 +1,31 @@
 const modalButtons = document.querySelectorAll('.modal-button');
 const modal = document.querySelector('.modal');
 const modalCloseButton = document.querySelector('.modal__form-button');
-const modalCloseArea = document.querySelector('.modal__for-close');
 
 const onModalButtonClick = (evt) => {
   evt.preventDefault();
   modal.classList.add('is-open');
 };
 
-modalButtons.forEach((button) => button.addEventListener('click', onModalButtonClick));
-
-modalCloseButton.addEventListener('click', () => {
+const onModalCloseButtonClick = (evt) => {
+  evt.preventDefault();
   modal.classList.remove('is-open');
-});
+};
 
+const onModalClick = (evt) => {
+  if (!evt.target.closest('.modal__wrapper')) {
+    modal.classList.remove('is-open');
+  }
+};
 
-modalCloseArea.addEventListener('click', () => {
-  modal.classList.remove('is-open');
-});
-
-document.addEventListener('keydown', (evt) => {
+const onDocumentKeydown = (evt) => {
   if (evt.key === 'Escape') {
     evt.preventDefault();
     modal.classList.remove('is-open');
   }
-});
+};
+
+modalButtons.forEach((button) => button.addEventListener('click', onModalButtonClick));
+modalCloseButton.addEventListener('click', onModalCloseButtonClick);
+modal.addEventListener('click', onModalClick);
+document.addEventListener('keydown', onDocumentKeydown);

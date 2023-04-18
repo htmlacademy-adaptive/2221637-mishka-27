@@ -91,18 +91,16 @@
             </picture>
           </a>
           <div class="product__info">
-            <a class="product__title-wrapper" href="#">
-              <h3 class="product__title">Зайчик-попрыгайчик</h3>
-            </a>
+            <a class="product__title" href="#">Зайчик-попрыгайчик</a>
             <p class="product__description">Рост 30&nbsp;см, вес 200&nbsp;г</p>
             <div class="product__buy">
               <p class="product__price">1&nbsp;200&nbsp;руб.</p>
-              <a class="product__cart modal-button" href="#">
+              <button class="product__cart modal-button" type="button">
                 <span class="visually-hidden">Добавить в корзину</span>
                 <svg width="20" height="19">
                   <use href="img/sprite.svg#cart"></use>
                 </svg>
-              </a>
+              </button>
             </div>
           </div>
         </li>
@@ -118,9 +116,7 @@
             </picture>
           </a>
           <div class="product__info">
-            <a class="product__title-wrapper" href="#">
-              <h3 class="product__title">Корзинка для белья</h3>
-            </a>
+            <a class="product__title" href="#">Корзинка для белья</a>
             <p class="product__description">Диаметр 15&nbsp;см, высота 10&nbsp;см</p>
             <div class="product__buy">
               <p class="product__price">690&nbsp;руб.</p>
@@ -145,9 +141,7 @@
             </picture>
           </a>
           <div class="product__info">
-            <a class="product__title-wrapper" href="#">
-              <h3 class="product__title">Большая корзинка для&nbsp;игрушек</h3>
-            </a>
+            <a class="product__title" href="#">Большая корзинка для&nbsp;игрушек</a>
             <p class="product__description">Диаметр 30&nbsp;см, высота 30&nbsp;см</p>
             <div class="product__buy">
               <p class="product__price">1&nbsp;500&nbsp;руб.</p>
@@ -175,51 +169,18 @@
             <source media="(min-width: 768px)" srcset="img/content/video-tablet.jpg, img/content/video-tablet@2x.jpg 2x">
             <img class="video__player-image" src="img/content/video-mobile.jpg" srcset="img/content/video-mobile@2x.jpg 2x" width="260" height="150" alt="Превью видео.">
           </picture>
-          <button class="video__player-button" type="button">
+          <a class="video__player-button" href="#">
             <span class="visually-hidden">Смотреть.</span>
             <svg class="video__player-button-icon" width="100" height="77">
               <use href="img/sprite.svg#play"></use>
             </svg>
-          </button>
+          </a>
         </div>
         <p class="video__description">По&nbsp;просьбам наших любимых фолловеров мы&nbsp;сняли для вас подробное видео о&nbsp;том, как появляются наши товары.</p>
         <a class="video__button button" href="form.html">Сделать заказ</a>
       </div>
     </section>
   </main>
-
-  <section class="modal">
-    <div class="modal__for-close"></div> <!-- Блок для скрипта, закрыть модальное окно при клике вне модального окна -->
-    <div class="modal__wrapper">
-      <p class="modal__title">Добавить в&nbsp;корзину</p>
-      <form class="modal__form" method="POST" action="https://echo.htmlacademy.ru">
-        <fieldset class="modal__form">
-          <legend class="modal__form-description">Выберите размер:</legend>
-          <ul class="modal__form-list">
-            <li>
-              <label>
-                <input class="modal__form-value visually-hidden" type="radio" name="size" value="s" checked>
-                <span class="modal__form-text">S</span>
-              </label>
-            </li>
-            <li>
-              <label>
-                <input class="modal__form-value visually-hidden" type="radio" name="size" value="m">
-                <span class="modal__form-text">M</span>
-              </label>
-            </li>
-            <li>
-              <label>
-                <input class="modal__form-value visually-hidden" type="radio" name="size" value="l">
-                <span class="modal__form-text">L</span>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-        <button class="modal__form-button button button--colored" type="submit">Добавить</button>
-      </div>
-    </form>
-  </section>
 
   <footer class="footer">
     <div class="footer__wrapper container">
@@ -263,6 +224,38 @@
       </a>
     </div>
   </footer>
+
+  <section class="modal">
+    <div class="modal__wrapper">
+      <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
+      <form class="modal__form" method="POST" action="https://echo.htmlacademy.ru">
+        <fieldset class="modal__form">
+          <legend class="modal__form-description">Выберите размер:</legend>
+          <ul class="modal__form-list">
+            <li>
+              <label>
+                <input class="modal__form-value visually-hidden" type="radio" name="size" value="s" checked>
+                <span class="modal__form-text">S</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input class="modal__form-value visually-hidden" type="radio" name="size" value="m">
+                <span class="modal__form-text">M</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input class="modal__form-value visually-hidden" type="radio" name="size" value="l">
+                <span class="modal__form-text">L</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="modal__form-button button button--colored" type="submit">Добавить</button>
+      </form>
+    </div>
+  </section>
 
   <script src="js/script.js"></script>
   <script src="js/modal.js"></script>

@@ -33,7 +33,7 @@
           </picture>
         </a>
       </div>
-    <ul class="navigation__catalog">
+      <ul class="navigation__catalog">
         <li class="navigation__catalog-item">
           <a class="navigation__catalog-link" href="catalog.html">Каталог товаров</a>
         </li>
@@ -67,7 +67,7 @@
           <a class="navigation__actions-link" href="#">Распродажа</a>
         </li>
       </ul>
-      <div class="navigation__information"><p>Бесплатная доставка по&nbsp;России</p></div>
+      <p class="navigation__information">Бесплатная доставка по&nbsp;России</p>
       <button class="navigation__toggle" type="button" aria-label="Открыть или закрыть меню сайта."></button>
     </nav>
   </header>
@@ -181,39 +181,6 @@
     </section>
   </main>
 
-  <section class="modal">
-    <div class="modal__for-close"></div> <!-- Блок для скрипта, закрыть модальное окно при клике вне модального окна -->
-    <div class="modal__wrapper">
-      <p class="modal__title">Добавить в&nbsp;корзину</p>
-      <form class="modal__form" method="POST" action="https://echo.htmlacademy.ru">
-        <fieldset class="modal__form">
-          <legend class="modal__form-description">Выберите размер:</legend>
-          <ul class="modal__form-list">
-            <li>
-              <label>
-                <input class="modal__form-value visually-hidden" type="radio" name="size" value="s" checked>
-                <span class="modal__form-text">S</span>
-              </label>
-            </li>
-            <li>
-              <label>
-                <input class="modal__form-value visually-hidden" type="radio" name="size" value="m">
-                <span class="modal__form-text">M</span>
-              </label>
-            </li>
-            <li>
-              <label>
-                <input class="modal__form-value visually-hidden" type="radio" name="size" value="l">
-                <span class="modal__form-text">L</span>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-        <button class="modal__form-button button button--colored" type="submit">Добавить</button>
-      </div>
-    </form>
-  </section>
-
   <footer class="footer">
     <div class="footer__wrapper container">
       <a class="footer__logo" href="#">
@@ -256,6 +223,38 @@
       </a>
     </div>
   </footer>
+
+  <section class="modal">
+    <div class="modal__wrapper">
+      <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
+      <form class="modal__form" method="POST" action="https://echo.htmlacademy.ru">
+        <fieldset class="modal__form">
+          <legend class="modal__form-description">Выберите размер:</legend>
+          <ul class="modal__form-list">
+            <li>
+              <label>
+                <input class="modal__form-value visually-hidden" type="radio" name="size" value="s" checked>
+                <span class="modal__form-text">S</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input class="modal__form-value visually-hidden" type="radio" name="size" value="m">
+                <span class="modal__form-text">M</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input class="modal__form-value visually-hidden" type="radio" name="size" value="l">
+                <span class="modal__form-text">L</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="modal__form-button button button--colored" type="submit">Добавить</button>
+      </form>
+    </div>
+  </section>
 
   <script src="js/script.js"></script>
   <script src="js/modal.js"></script>
