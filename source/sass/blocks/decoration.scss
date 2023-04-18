@@ -1,0 +1,57 @@
+.decoration {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background-repeat: repeat-x;
+    background-image: url("../img/svg/waves-mobile.svg");
+
+
+    @media (min-width: $vp-768) {
+      background-image: url("../img/svg/waves-tablet.svg");
+      height: 17px;
+    }
+
+    @media (min-width: $vp-1024) {
+      background-image: url("../img/svg/waves-desktop.svg");
+      height: 24px;
+      left: $distance-50;
+      right: $distance-50;
+    }
+  }
+
+  &--fill::after {
+    display: none;
+
+    @media (min-width: $vp-768) {
+      display: block;
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 23px;
+      bottom: -8px;
+      background-repeat: repeat-x;
+      background-image: url("../img/svg/waves-fill.svg");
+    }
+
+    @media (min-width: $vp-1024) {
+      height: 34px;
+      bottom: -18px;
+      background-image: url("../img/svg/waves-fill-desktop.svg");
+    }
+  }
+
+  &--image::after {
+    @media (min-width: $vp-1024) {
+      background-image: url("../img/svg/waves-fill--image-desktop.svg");
+      left: 12px;
+    }
+  }
+}

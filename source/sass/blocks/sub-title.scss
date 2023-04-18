@@ -1,0 +1,12 @@
+.sub-title {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $color-downy;
+
+  @media (min-width: $vp-768) {
+    line-height: 17px;
+    margin-right: 20px;
+  }
+}
