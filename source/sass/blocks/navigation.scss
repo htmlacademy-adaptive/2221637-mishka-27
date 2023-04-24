@@ -41,6 +41,7 @@
 
   @media (min-width: $vp-1024) {
     position: relative;
+
     &::after {
       content: "";
       background-color: $color-white;
@@ -97,6 +98,7 @@
   background-color: $color-white;
 
   display: none;
+
   &--visible {
     display: block;
   }
@@ -132,7 +134,8 @@
     &:last-child {
       border: 0;
       padding-right: 10px;
-  }}
+    }
+  }
 }
 
 .navigation__catalog-link {
@@ -174,6 +177,7 @@
   height: 100%;
 
   display: none;
+
   &--visible {
     display: block;
   }
@@ -201,7 +205,6 @@
 }
 
 .navigation__additional-item--hidden-text .navigation__additional-text {
-
   @media (min-width: $vp-768) {
     /*visually-hidden*/
     position: absolute;
@@ -236,7 +239,7 @@
     height: auto;
     width: auto;
     padding: 0;
-    margin: 33px 0px 30px 32px;
+    margin: 33px 0 30px 32px;
   }
 
   &:hover {
@@ -299,7 +302,7 @@
 
 .navigation__actions-link {
   text-decoration: none;
-  color:$color-black
+  color: $color-black;
 }
 
 .navigation__information {
