@@ -133,17 +133,16 @@
     width: unset;
     position: absolute;
     top: 80px;
-    right: 0px;
+    right: 0;
     max-width: 30%;
   }
 }
 
 .review__button > * {
   transform: rotateX(90deg);
-
 }
 
-.review_list {
+.review__list {
   list-style: none;
   grid-area: text;
 }
@@ -155,11 +154,11 @@
   padding: 12px 42px 9px 38px;
   cursor: pointer;
 
-  &:hover .review__slider-arrow{
+  &:hover .review__slider-arrow {
     opacity: 0.6;
   }
 
-  &:active .review__slider-arrow{
+  &:active .review__slider-arrow {
     opacity: 0.3;
   }
 

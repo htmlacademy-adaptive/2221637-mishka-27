@@ -67,7 +67,7 @@
 
   @media (min-width: $vp-1024) {
     width: 89px;
-    margin: 9px 43px 0px 43px;
+    margin: 9px 43px 0 43px;
     padding-right: 11px;
   }
 }
@@ -101,10 +101,15 @@
 .week-product__specs-point {
   border-bottom: 1px solid $color-whisper--light;
   padding-top: 5px;
-  padding-bottom: 10px;
+  padding-bottom: 14px;
+  line-height: 20px;
 
   &:nth-child(odd) {
     padding-right: 10px;
+  }
+
+  @media (min-width: $vp-768) {
+    padding-bottom: 16px;
   }
 }
 
